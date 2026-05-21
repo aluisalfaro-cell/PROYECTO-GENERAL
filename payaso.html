@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PUMPKIN + ROBOT</title>
+
+<style>
+/* ================= PAYASO (TU CÓDIGO ORIGINAL) ================= */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #d9d9d9;
+}
+
+/* CONTENEDOR PAYASO */
+.contenedor {
+    width: 400px;
+    height: 700px;
+    background-color: skyblue;
+    position: relative;
+    margin: 20px auto;
+    overflow: hidden;
+}
+
+/* GORRITO */
+.gorrito {
+    width: 100px;
+    height: 100px;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    position: absolute;
+    top: 40px;
+    left: 150px;
+    background-image:url(sombrero.jfif);
+    background-size: cover;
+    background-position: center;
+    background-color: #e05252;
+}
+
+/* CABEZA */
+.cabeza {
+    width: 140px;
+    height: 140px;
+    clip-path: circle(50% at 50% 50%);
+    position: absolute;
+    top: 120px;
+    left: 130px;
+    background-image: url(cabeza.jfif);
+    background-size: cover;
+    background-position: center;
+    background-color: #f4a261;
+}
+
+/* CUERPO */
+.cuerpo {
+    width: 110px;
+    height: 300px;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%);
+    position: absolute;
+    top: 250px;
+    left: 145px;
+    background-image: url(descarga.jpgs);
+    background-size: cover;
+    background-position: center;
+    background-color: #f4c261;
+}
+
+/* BRAZOS */
+.brazoI {
+    width: 120px;
+    height: 70px;
+    clip-path: polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
+    position: absolute;
+    top: 320px;
+    left: 30px;
+    background-image: url(brazo\ derecho.jfif);
+    background-size: cover;
+    background-position: center;
+    background-color: #e08c5a;
+}
+
+.BrazoD {
+    width: 120px;
+    height: 70px;
+    clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+    position: absolute;
+    top: 320px;
+    left: 250px;
+    background-image: url(brazo\ derecho.jfif);
+    background-size: cover;
+    background-position: center;
+    background-color: #e08c5a;
+}
+
+/* PIES */
+.PieD {
+    width: 80px;
+    height: 45px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 70px;
+    left: 120px;
+    transform: rotate(10deg);
+    background-image: url(pie\ derecho.jfif);
+    background-size: cover;
+    background-position: center;
+    background-color: #c0795a;
+}
+
+.PieI {
+    width: 80px;
+    height: 45px;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 70px;
+    left: 200px;
+    transform: rotate(-10deg);
+    background-image: url(pie\ izquierdo.jfif);
+    background-size: cover;
+    background-position: center;
+    background-color: #c0795a;
+}
+
+
+/* ================= ROBOT (AGREGADO SIN TOCAR TU PAYASO) ================= */
+
+.robot{
+    width:400px;
+    height:700px;
+    background:linear-gradient(lightblue, white);
+    margin:20px auto;
+    position:relative;
+    overflow:hidden;
+}
+
+/* CABEZA ROBOT */
+.cabezaR{
+    width:150px;
+    height:150px;
+    background:#808080;
+    border-radius:20px;
+    position:absolute;
+    top:100px;
+    left:125px;
+     background-color:#808080;
+    background-image:url(ai-wallpaper-prompt-1.avif);
+    background-size:cover;
+    background-position:center;
+}
+
+/* OJOS */
+.ojo1, .ojo2{
+    width:25px;
+    height:25px;
+    background:cyan;
+    border-radius:50%;
+    position:absolute;
+    top:40px;
+    background-color:#808080;
+    background-image:url(ojos.jfif);
+    background-size:cover;
+    background-position:center;
+}
+
+.ojo1{ left:35px; }
+.ojo2{ right:35px; }
+
+/* BOCA */
+.boca{
+    width:70px;
+    height:12px;
+    background:black;
+    position:absolute;
+    bottom:30px;
+    left:40px;
+    border-radius:10px;
+}
+
+/* ANTENA */
+.antena{
+    width:10px;
+    height:50px;
+    background:black;
+    position:absolute;
+    top:-45px;
+    left:70px;
+}
+
+.pelota{
+    width:25px;
+    height:25px;
+    background:red;
+    border-radius:50%;
+    position:absolute;
+    top:-60px;
+    left:62px;
+}
+
+/* CUERPO */
+.cuerpoR{
+    width:180px;
+    height:220px;
+    background:#5c5c5c;
+    position:absolute;
+    top:260px;
+    left:110px;
+    border-radius:15px;
+     background-image: url(artificial-intelligence-in-a-futuristic-setting-abstract-3d-render-illustration-of-hexagonal-shapes-on-a-modern-powerpoint-background_027ba50c41__960_540.avif);
+    background-size: cover;
+    background-position: center;
+}
+
+/* BOTONES */
+.boton1, .boton2, .boton3{
+    width:25px;
+    height:25px;
+    border-radius:50%;
+    position:absolute;
+    left:77px;
+}
+
+.boton1{ top:40px; background:red; }
+.boton2{ top:90px; background:yellow; }
+.boton3{ top:140px; background:lime; }
+
+/* BRAZOS */
+.brazoI, .brazoD{
+    width:90px;
+    height:25px;
+    background:#808080;
+    position:absolute;
+    top:300px; background-color:#808080;
+    background-image:url(brazitoss.jfif);
+    background-size:cover;
+    background-position:center;
+}
+
+.brazoI{ left:25px; transform:rotate(20deg); }
+.brazoD{ right:25px; transform:rotate(-20deg); }
+
+/* PIERNAS */
+.piernaI, .piernaD{
+    width:30px;
+    height:120px;
+    background:#808080;
+    position:absolute;
+    top:480px;
+    background-color:#808080;
+    background-image:url(images.jfif);
+    background-size:cover;
+    background-position:center;
+}
+
+.piernaI{ left:145px; }
+.piernaD{ right:145px; }
+
+/* PIES */
+.pieI, .pieD{
+    width:70px;
+    height:25px;
+    background:black;
+    border-radius:20px;
+    position:absolute;
+    top:590px;
+    background-color:#808080;
+    background-image:url(descarga.jfif);
+    background-size:cover;
+    background-position:center;
+}
+
+.pieI{ left:125px; }
+.pieD{ right:125px; }
+
+</style>
+</head>
+
+<body>
+
+<!-- PAYASO -->
+<div class="contenedor">
+    <div class="gorrito"></div>
+    <div class="cabeza"></div>
+    <div class="cuerpo"></div>
+    <div class="brazoI"></div>
+    <div class="BrazoD"></div>
+    <div class="PieD"></div>
+    <div class="PieI"></div>
+</div>
+
+<!-- ROBOT -->
+<div class="robot">
+
+    <div class="cabezaR">
+        <div class="ojo1"></div>
+        <div class="ojo2"></div>
+        <div class="boca"></div>
+        <div class="antena"></div>
+        <div class="pelota"></div>
+    </div>
+
+    <div class="cuerpoR">
+        <div class="boton1"></div>
+        <div class="boton2"></div>
+        <div class="boton3"></div>
+    </div>
+
+    <div class="brazoI"></div>
+    <div class="brazoD"></div>
+
+    <div class="piernaI"></div>
+    <div class="piernaD"></div>
+
+    <div class="pieI"></div>
+    <div class="pieD"></div>
+
+</div>
+
+</body>
+</html>
