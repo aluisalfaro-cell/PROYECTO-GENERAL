@@ -68,14 +68,14 @@ body{
     top:250px;
     left:145px;
 
-    background-image:url("img/descarga.jpg");
+    background-image:url("img/descarga.jfif");
     background-size:cover;
     background-position:center;
     background-color:#f4c261;
 }
 
-/* BRAZOS */
-.brazoI{
+/* BRAZO IZQUIERDO PAYASO */
+.brazoPayasoI{
     width:120px;
     height:70px;
     clip-path:polygon(25% 0%, 100% 0%, 100% 100%, 25% 100%, 0% 50%);
@@ -89,7 +89,8 @@ body{
     background-color:#e08c5a;
 }
 
-.BrazoD{
+/* BRAZO DERECHO PAYASO */
+.BrazoPayasoD{
     width:120px;
     height:70px;
     clip-path:polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
@@ -103,7 +104,7 @@ body{
     background-color:#e08c5a;
 }
 
-/* PIES */
+/* PIES PAYASO */
 .PieD{
     width:80px;
     height:45px;
@@ -212,7 +213,7 @@ body{
     left:62px;
 }
 
-/* CUERPO */
+/* CUERPO ROBOT */
 .cuerpoR{
     width:180px;
     height:220px;
@@ -252,7 +253,8 @@ body{
 }
 
 /* BRAZOS ROBOT */
-.brazoD{
+.brazoRobotI,
+.brazoRobotD{
     width:90px;
     height:25px;
     background:#808080;
@@ -264,22 +266,12 @@ body{
     background-position:center;
 }
 
-.brazoI{
-    width:90px;
-    height:25px;
-    background:#808080;
-    position:absolute;
-    top:300px;
-
-    background-image:url("img/brazitoss.jfif");
-    background-size:cover;
-    background-position:center;
-
+.brazoRobotI{
     left:25px;
     transform:rotate(20deg);
 }
 
-.brazoD{
+.brazoRobotD{
     right:25px;
     transform:rotate(-20deg);
 }
@@ -334,34 +326,44 @@ body{
 
 <!-- PAYASO -->
 <div class="contenedor">
+
     <div class="gorrito"></div>
     <div class="cabeza"></div>
     <div class="cuerpo"></div>
-    <div class="brazoI"></div>
-    <div class="BrazoD"></div>
+
+    <div class="brazoPayasoI"></div>
+    <div class="BrazoPayasoD"></div>
+
     <div class="PieD"></div>
     <div class="PieI"></div>
+
 </div>
 
 <!-- ROBOT -->
 <div class="robot">
 
     <div class="cabezaR">
+
         <div class="ojo1"></div>
         <div class="ojo2"></div>
+
         <div class="boca"></div>
+
         <div class="antena"></div>
         <div class="pelota"></div>
+
     </div>
 
     <div class="cuerpoR">
+
         <div class="boton1"></div>
         <div class="boton2"></div>
         <div class="boton3"></div>
+
     </div>
 
-    <div class="brazoI"></div>
-    <div class="brazoD"></div>
+    <div class="brazoRobotI"></div>
+    <div class="brazoRobotD"></div>
 
     <div class="piernaI"></div>
     <div class="piernaD"></div>
